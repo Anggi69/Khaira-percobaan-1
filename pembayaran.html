@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pembayaran - KhairaTopUp</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="navbar">
+
+        <div class="nav-left">
+
+            <a href="./projek%20robux.html">
+                Top Up Robux
+            </a>
+
+        </div>
+
+
+        <a href="./projek%20robux.html" class="logo">
+
+            KHAIRA
+            <span>TOPUP</span>
+
+        </a>
+
+
+        <div class="nav-right">
+
+            <a href="#">
+                Cek Pesanan
+            </a>
+
+            <a href="#">
+                🛒
+            </a>
+
+            <a href="#">
+                ⌕
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         HALAMAN PEMBAYARAN
+    ========================== -->
+
+    <main class="payment-page">
+
+        <div class="payment-container">
+
+
+            <h1>
+                Pembayaran
+            </h1>
+
+
+            <p class="payment-subtitle">
+
+                Selesaikan pembayaran untuk
+                melanjutkan pesananmu.
+
+            </p>
+
+
+
+            <!-- =========================
+                 DETAIL PESANAN
+            ========================== -->
+
+            <div class="order-box">
+
+                <h2>
+                    Detail Pesanan
+                </h2>
+
+
+                <div class="order-row">
+
+                    <span>
+                        Metode Pembelian
+                    </span>
+
+                    <strong id="metodePembelian">
+                        Via Gamepass
+                    </strong>
+
+                </div>
+
+
+                <div class="order-row">
+
+                    <span>
+                        Jumlah Robux
+                    </span>
+
+                    <strong id="jumlahRobux">
+                        0 Robux
+                    </strong>
+
+                </div>
+
+
+                <div class="order-row">
+
+                    <span>
+                        Rate
+                    </span>
+
+                    <strong id="rateRobux">
+                        Rp150 / Robux
+                    </strong>
+
+                </div>
+
+
+                <div class="order-row total-row">
+
+                    <span>
+                        Total Harga
+                    </span>
+
+                    <strong id="totalHarga">
+                        Rp0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 METODE PEMBAYARAN
+            ========================== -->
+
+            <div class="payment-method">
+
+                <h2>
+                    Pilih Metode Pembayaran
+                </h2>
+
+
+                <div class="payment-options">
+
+
+                    <button
+                        type="button"
+                        onclick="pilihPembayaran('QRIS')">
+
+                        QRIS
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        onclick="pilihPembayaran('GoPay')">
+
+                        GoPay
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        onclick="pilihPembayaran('DANA')">
+
+                        DANA
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        onclick="pilihPembayaran('Bank Transfer')">
+
+                        Transfer Bank
+
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 DETAIL PEMBAYARAN
+            ========================== -->
+
+            <div class="qr-box">
+
+                <h2 id="paymentTitle">
+                    QRIS
+                </h2>
+
+
+                <!-- =====================
+                     QRIS
+                ====================== -->
+
+                <div id="qrisPayment">
+
+                    <div class="qr-image">
+
+                        <img
+                            src="QR khairaa.png"
+                            alt="QR Pembayaran">
+
+                    </div>
+
+                    <p>
+                        Scan QRIS menggunakan aplikasi
+                        pembayaran kamu.
+                    </p>
+
+                </div>
+
+
+
+                <!-- =====================
+                     GOPAY
+                ====================== -->
+
+                <div
+                    id="gopayPayment"
+                    class="payment-detail"
+                    style="display: none;">
+
+                    <div class="payment-icon">
+                        💚
+                    </div>
+
+                    <p class="payment-label">
+                        Nomor GoPay
+                    </p>
+
+                    <h3>
+                        0877-2975-4639
+                    </h3>
+
+                    <p>
+                        A/N Khaira TopUp
+                    </p>
+
+                </div>
+
+
+
+                <!-- =====================
+                     DANA
+                ====================== -->
+
+                <div
+                    id="danaPayment"
+                    class="payment-detail"
+                    style="display: none;">
+
+                    <div class="payment-icon">
+                        💙
+                    </div>
+
+                    <p class="payment-label">
+                        Nomor DANA
+                    </p>
+
+                    <h3>
+                        0877-2975-4639
+                    </h3>
+
+                    <p>
+                        A/N Khaira TopUp
+                    </p>
+
+                </div>
+
+
+
+                <!-- =====================
+                     BANK TRANSFER
+                ====================== -->
+
+                <div
+                    id="bankPayment"
+                    class="payment-detail"
+                    style="display: none;">
+
+                    <div class="payment-icon">
+                        🏦
+                    </div>
+
+                    <p class="payment-label">
+                        Nomor Rekening
+                    </p>
+
+                    <h3>
+                        0637-0106-9443-505
+                    </h3>
+
+                    <p>
+                        Bank BCA
+                        <br>
+                        A/N Khaira TopUp
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 TOTAL PEMBAYARAN
+            ========================== -->
+
+            <div class="final-payment">
+
+                <p>
+                    Total yang harus dibayar
+                </p>
+
+
+                <h2 id="finalTotal">
+                    Rp0
+                </h2>
+
+            </div>
+
+
+
+            <!-- =========================
+                 TOMBOL BAYAR
+            ========================== -->
+
+            <button
+                class="pay-button"
+                type="button"
+                onclick="sudahBayar()">
+
+                Saya Sudah Bayar
+
+            </button>
+
+
+
+            <!-- KEMBALI -->
+
+            <a
+                href="./projek%20robux.html"
+                class="back-button">
+
+                ← Kembali ke Home
+
+            </a>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+
+        // ==========================
+        // AMBIL DATA DARI URL
+        // ==========================
+
+        const urlParams =
+            new URLSearchParams(window.location.search);
+
+
+        const robux =
+            parseInt(urlParams.get("robux")) || 0;
+
+
+        const metode =
+            urlParams.get("metode") || "Gamepass";
+
+
+
+        // ==========================
+        // MENENTUKAN RATE
+        // ==========================
+
+        let rate = 150;
+
+
+        if (metode === "Gamepass") {
+
+            rate = 150;
+
+        }
+
+        else if (metode === "Login") {
+
+            rate = 155;
+
+        }
+
+        else if (metode === "Send") {
+
+            rate = 160;
+
+        }
+
+
+
+        // ==========================
+        // HITUNG TOTAL
+        // ==========================
+
+        const total =
+            robux * rate;
+
+
+
+        // ==========================
+        // TAMPILKAN METODE
+        // ==========================
+
+        document.getElementById(
+            "metodePembelian"
+        ).textContent =
+
+            "Via " + metode;
+
+
+
+        // ==========================
+        // TAMPILKAN JUMLAH ROBUX
+        // ==========================
+
+        document.getElementById(
+            "jumlahRobux"
+        ).textContent =
+
+            robux.toLocaleString("id-ID")
+            + " Robux";
+
+
+
+        // ==========================
+        // TAMPILKAN RATE
+        // ==========================
+
+        document.getElementById(
+            "rateRobux"
+        ).textContent =
+
+            "Rp"
+            + rate.toLocaleString("id-ID")
+            + " / Robux";
+
+
+
+        // ==========================
+        // TAMPILKAN TOTAL
+        // ==========================
+
+        document.getElementById(
+            "totalHarga"
+        ).textContent =
+
+            "Rp"
+            + total.toLocaleString("id-ID");
+
+
+
+        document.getElementById(
+            "finalTotal"
+        ).textContent =
+
+            "Rp"
+            + total.toLocaleString("id-ID");
+
+
+
+        // ==========================
+        // PILIH PEMBAYARAN
+        // ==========================
+
+        function pilihPembayaran(metodeBayar) {
+
+
+            // Ganti judul pembayaran
+
+            document.getElementById(
+                "paymentTitle"
+            ).textContent = metodeBayar;
+
+
+
+            // Sembunyikan semua metode
+
+            document.getElementById(
+                "qrisPayment"
+            ).style.display = "none";
+
+
+            document.getElementById(
+                "gopayPayment"
+            ).style.display = "none";
+
+
+            document.getElementById(
+                "danaPayment"
+            ).style.display = "none";
+
+
+            document.getElementById(
+                "bankPayment"
+            ).style.display = "none";
+
+
+
+            // ======================
+            // QRIS
+            // ======================
+
+            if (metodeBayar === "QRIS") {
+
+                document.getElementById(
+                    "qrisPayment"
+                ).style.display = "block";
+
+            }
+
+
+
+            // ======================
+            // GOPAY
+            // ======================
+
+            else if (metodeBayar === "GoPay") {
+
+                document.getElementById(
+                    "gopayPayment"
+                ).style.display = "block";
+
+            }
+
+
+
+            // ======================
+            // DANA
+            // ======================
+
+            else if (metodeBayar === "DANA") {
+
+                document.getElementById(
+                    "danaPayment"
+                ).style.display = "block";
+
+            }
+
+
+
+            // ======================
+            // BANK
+            // ======================
+
+            else if (
+                metodeBayar === "Bank Transfer"
+            ) {
+
+                document.getElementById(
+                    "bankPayment"
+                ).style.display = "block";
+
+            }
+
+        }
+
+
+
+        // ==========================
+        // TOMBOL SUDAH BAYAR
+        // ==========================
+
+        function sudahBayar() {
+
+            alert(
+                "Pembayaran berhasil dikonfirmasi. Pesanan kamu sedang diproses!"
+            );
+
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

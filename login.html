@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Robux Via Login - KhairaTopUp</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="nav-left">
+
+            <a href="./projek%20robux.html">
+                Home
+            </a>
+
+            <a href="#">
+                Robux Via Login
+            </a>
+
+        </div>
+
+
+        <a href="./projek%20robux.html" class="logo">
+
+            KHAIRA <span>TOPUP</span>
+
+        </a>
+
+
+        <div class="nav-right">
+
+            <a href="#">
+                Cek Pesanan
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- FORM -->
+    <main class="form-page">
+
+        <div class="form-container">
+
+            <h1>
+                Robux Via Login
+            </h1>
+
+            <p class="subtitle">
+
+                Isi data berikut untuk simulasi
+                pembelian Robux melalui Via Login.
+
+            </p>
+
+
+            <!-- FORM PEMBELIAN -->
+            <form action="pembayaran.html" method="get">
+
+                <!-- METODE -->
+                <input
+                    type="hidden"
+                    name="metode"
+                    value="Login"
+                >
+
+
+                <!-- USERNAME -->
+                <div class="form-group">
+
+                    <label>
+                        Username Roblox
+                    </label>
+
+                    <input
+                        type="text"
+                        name="username"
+                        placeholder="Masukkan username Roblox"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- PASSWORD -->
+                <div class="form-group">
+
+                    <label>
+                        Password (Simulasi)
+                    </label>
+
+                    <input
+                        type="password"
+                        placeholder="Masukkan password "
+                        autocomplete="off"
+                        required
+                    >
+
+                    <small style="color: #777;">
+                        Untuk keperluan simulasi tampilan website.
+                    </small>
+
+                </div>
+
+
+                <!-- JUMLAH ROBUX -->
+                <div class="form-group">
+
+                    <label>
+                        Jumlah Robux
+                    </label>
+
+                    <select
+                        name="robux"
+                        required
+                    >
+
+                        <option value="">
+                            Pilih jumlah Robux
+                        </option>
+
+                        <option value="100">
+                            100 Robux
+                        </option>
+
+                        <option value="200">
+                            200 Robux
+                        </option>
+
+                        <option value="400">
+                            400 Robux
+                        </option>
+
+                        <option value="800">
+                            800 Robux
+                        </option>
+
+                        <option value="1000">
+                            1000 Robux
+                        </option>
+
+                        <option value="2000">
+                            2000 Robux
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- EMAIL -->
+                <div class="form-group">
+
+                    <label>
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="contoh@email.com"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- NOMOR HP -->
+                <div class="form-group">
+
+                    <label>
+                        Nomor HP
+                    </label>
+
+                    <input
+                        type="tel"
+                        name="phone"
+                        placeholder="08xxxxxxxxxx"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- TOMBOL -->
+                <button
+                    type="submit"
+                    class="form-button">
+
+                    Lanjutkan Pembelian
+
+                </button>
+
+            </form>
+
+
+            <!-- KEMBALI -->
+            <a
+                href="./projek%20robux.html"
+                class="back-button">
+
+                ← Kembali ke Home
+
+            </a>
+
+        </div>
+
+    </main>
+
+
+</body>
+
+</html>

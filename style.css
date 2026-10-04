@@ -1,0 +1,1004 @@
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==================================================
+   BODY
+================================================== */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fffdf5;
+    color: #574700;
+}
+
+
+/* ==================================================
+   NAVBAR
+================================================== */
+
+.navbar {
+    position: absolute;
+    z-index: 20;
+
+    top: 20px;
+    left: 4%;
+
+    width: 92%;
+    height: 85px;
+
+    background-color: white;
+
+    border-radius: 0 0 35px 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 45px;
+
+    box-shadow:
+        0 5px 25px rgba(140, 110, 0, 0.10);
+}
+
+
+/* ==================================================
+   NAVIGATION
+================================================== */
+
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-left a,
+.nav-right a {
+    text-decoration: none;
+    color: #a48300;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-left a:hover,
+.nav-right a:hover {
+    color: #e3b200;
+}
+
+
+/* ==================================================
+   LOGO
+================================================== */
+
+.logo {
+    position: absolute;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    text-decoration: none;
+
+    color: #e6b400;
+
+    font-size: 25px;
+    font-weight: 900;
+
+    text-align: center;
+}
+
+.logo span {
+    display: block;
+
+    font-size: 9px;
+    letter-spacing: 5px;
+
+    color: #aa8b27;
+
+    margin-top: 2px;
+}
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero {
+    position: relative;
+
+    min-height: 850px;
+
+    overflow: hidden;
+
+    padding-top: 165px;
+    padding-bottom: 100px;
+
+    background:
+        radial-gradient(
+            circle at 8% 30%,
+            rgba(255, 221, 91, 0.35),
+            transparent 23%
+        ),
+
+        radial-gradient(
+            circle at 92% 65%,
+            rgba(255, 229, 125, 0.3),
+            transparent 25%
+        ),
+
+        linear-gradient(
+            135deg,
+            #fffef8,
+            #fff7d1
+        );
+}
+
+
+/* ==================================================
+   BACKGROUND GAMBAR
+================================================== */
+
+.hero-background {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 650px;
+
+    background-color: rgba(255,255,255,0.55);
+
+    z-index: 0;
+}
+
+
+/* ==================================================
+   ORNAMEN
+================================================== */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 330px;
+    height: 330px;
+
+    border-radius: 50%;
+
+    background-color: rgba(255, 210, 48, 0.14);
+
+    left: -150px;
+    top: 200px;
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 380px;
+    height: 380px;
+
+    border-radius: 50%;
+
+    background-color: rgba(255, 222, 83, 0.14);
+
+    right: -160px;
+    top: 180px;
+}
+
+
+/* ==================================================
+   HERO TEXT
+================================================== */
+
+.hero-text {
+    position: relative;
+
+    z-index: 5;
+
+    text-align: center;
+}
+
+.welcome {
+    font-size: 15px;
+
+    letter-spacing: 6px;
+
+    font-weight: bold;
+
+    color: #a68a24;
+
+    margin-bottom: 12px;
+}
+
+.hero-text h1 {
+    font-size: 65px;
+
+    font-weight: 900;
+
+    letter-spacing: -3px;
+
+    color: #5e4a00;
+
+    margin-bottom: 12px;
+}
+
+.hero-text h1 span {
+    color: #e3b000;
+}
+
+.hero-description {
+    color: #958044;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+}
+
+
+/* ==================================================
+   PRODUCT CONTAINER
+================================================== */
+
+.products {
+    position: relative;
+
+    z-index: 5;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 28px;
+
+    margin-top: 80px;
+}
+
+
+/* ==================================================
+   PRODUCT CARD
+================================================== */
+
+.product-card {
+    width: 290px;
+
+    min-height: 355px;
+
+    background-color: white;
+
+    border: 2px solid #f0dc89;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    text-decoration: none;
+
+    color: #594700;
+
+    box-shadow:
+        0 12px 30px rgba(145, 115, 0, 0.10);
+
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-12px);
+
+    border-color: #e5bd32;
+
+    box-shadow:
+        0 20px 40px rgba(145, 115, 0, 0.18);
+}
+
+
+/* ==================================================
+   PRODUCT IMAGE
+================================================== */
+
+.product-image {
+    width: 100%;
+
+    height: 180px;
+
+    background-color: white;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* ==================================================
+   PRODUCT INFO
+================================================== */
+
+.product-info {
+    text-align: center;
+
+    padding: 20px;
+}
+
+.product-info h2 {
+    font-size: 21px;
+
+    margin-bottom: 10px;
+
+    color: #6d5600;
+}
+
+.product-info p {
+    color: #9a8954;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    min-height: 42px;
+
+    margin-bottom: 18px;
+}
+
+
+/* ==================================================
+   PRODUCT BUTTON
+================================================== */
+
+.product-info button {
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background-color: #f3c52e;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.product-card:hover button {
+    background-color: #e5af00;
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+footer {
+    text-align: center;
+
+    background-color: white;
+
+    padding: 25px;
+
+    color: #a18c49;
+
+    font-size: 13px;
+}
+
+
+/* ==================================================
+   FORM PAGE
+================================================== */
+
+.form-page {
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffef8,
+            #fff7d1
+        );
+
+    padding-top: 140px;
+    padding-bottom: 80px;
+}
+
+
+/* ==================================================
+   FORM CONTAINER
+================================================== */
+
+.form-container {
+    width: 90%;
+
+    max-width: 600px;
+
+    margin: auto;
+
+    background-color: white;
+
+    padding: 35px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(130, 100, 0, 0.12);
+}
+
+.form-container h1 {
+    text-align: center;
+
+    color: #624d00;
+
+    margin-bottom: 10px;
+}
+
+.form-container .subtitle {
+    text-align: center;
+
+    color: #9b8950;
+
+    font-size: 14px;
+
+    margin-bottom: 30px;
+}
+
+
+/* ==================================================
+   FORM GROUP
+================================================== */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #675300;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #e8d58a;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    background-color: #fffef9;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #e4b600;
+
+    box-shadow:
+        0 0 0 3px rgba(228, 182, 0, 0.10);
+}
+
+
+/* ==================================================
+   FORM BUTTON
+================================================== */
+
+.form-button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background-color: #f0bf20;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.form-button:hover {
+    background-color: #dcae00;
+}
+
+
+/* ==================================================
+   BACK BUTTON
+================================================== */
+
+.back-button {
+    display: block;
+
+    text-align: center;
+
+    margin-top: 18px;
+
+    text-decoration: none;
+
+    color: #9b8233;
+
+    font-size: 14px;
+}
+
+
+/* ==================================================
+   HALAMAN PEMBAYARAN
+================================================== */
+
+.payment-page {
+    min-height: 100vh;
+
+    padding-top: 140px;
+    padding-bottom: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffef8,
+            #fff7d1
+        );
+}
+
+
+/* ==================================================
+   PAYMENT CONTAINER
+================================================== */
+
+.payment-container {
+    width: 90%;
+
+    max-width: 700px;
+
+    margin: auto;
+
+    background-color: white;
+
+    padding: 40px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(130, 100, 0, 0.12);
+}
+
+
+/* ==================================================
+   PAYMENT TITLE
+================================================== */
+
+.payment-container h1 {
+    text-align: center;
+
+    font-size: 35px;
+
+    color: #624d00;
+
+    margin-bottom: 10px;
+}
+
+.payment-subtitle {
+    text-align: center;
+
+    color: #9b8950;
+
+    font-size: 14px;
+
+    margin-bottom: 30px;
+}
+
+
+/* ==================================================
+   DETAIL PESANAN
+================================================== */
+
+.order-box {
+    background-color: #fff8df;
+
+    border: 2px solid #f4c542;
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    margin-bottom: 30px;
+}
+
+.order-box h2 {
+    color: #624d00;
+
+    margin-top: 0;
+
+    margin-bottom: 20px;
+}
+
+.order-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #eadca8;
+
+    font-size: 14px;
+}
+
+.order-row span {
+    color: #806d2b;
+}
+
+.order-row strong {
+    color: #574700;
+
+    text-align: right;
+}
+
+.total-row {
+    border-bottom: none;
+
+    font-size: 20px;
+
+    padding-top: 20px;
+}
+
+.total-row strong {
+    color: #d09d00;
+}
+
+
+/* ==================================================
+   METODE PEMBAYARAN
+================================================== */
+
+.payment-method {
+    margin-top: 10px;
+}
+
+.payment-method h2 {
+    color: #624d00;
+
+    margin-bottom: 15px;
+}
+
+.payment-options {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+.payment-options button {
+    border: 2px solid #f4c542;
+
+    background-color: white;
+
+    color: #675300;
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.payment-options button:hover {
+    background-color: #fff3b8;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==================================================
+   QR BOX
+================================================== */
+
+.qr-box {
+    margin-top: 30px;
+
+    text-align: center;
+
+    background-color: #fffdf5;
+
+    border: 2px dashed #f4c542;
+
+    border-radius: 20px;
+
+    padding: 30px;
+}
+
+.qr-box h2 {
+    color: #624d00;
+
+    margin-bottom: 20px;
+}
+
+.qr-image {
+    width: 230px;
+    height: 230px;
+
+    margin: auto;
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    padding: 10px;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.08);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.qr-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+.qr-box p {
+    color: #777;
+
+    margin-top: 20px;
+
+    font-size: 14px;
+}
+
+
+/* ==================================================
+   TOTAL AKHIR
+================================================== */
+
+.final-payment {
+    text-align: center;
+
+    margin: 30px 0;
+}
+
+.final-payment p {
+    margin-bottom: 5px;
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+.final-payment h2 {
+    font-size: 32px;
+
+    color: #d69e00;
+}
+
+
+/* ==================================================
+   TOMBOL SUDAH BAYAR
+================================================== */
+
+.pay-button {
+    width: 100%;
+
+    border: none;
+
+    background-color: #f4c542;
+
+    color: #222;
+
+    padding: 16px;
+
+    border-radius: 12px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.pay-button:hover {
+    background-color: #e8b82f;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==================================================
+   RESPONSIVE TABLET
+================================================== */
+
+@media screen and (max-width: 900px) {
+
+    .navbar {
+        width: 94%;
+
+        left: 3%;
+
+        padding: 0 20px;
+    }
+
+
+    .nav-left,
+    .nav-right {
+        gap: 12px;
+    }
+
+
+    .nav-left a,
+    .nav-right a {
+        font-size: 11px;
+    }
+
+
+    .logo {
+        font-size: 19px;
+    }
+
+
+    .products {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    .product-card {
+        width: 85%;
+
+        max-width: 350px;
+    }
+
+
+    .hero-text h1 {
+        font-size: 45px;
+    }
+
+}
+
+
+/* ==================================================
+   RESPONSIVE HP
+================================================== */
+
+@media screen and (max-width: 600px) {
+
+    .navbar {
+        height: 70px;
+
+        top: 10px;
+    }
+
+
+    .nav-left a:nth-child(2),
+    .nav-right a:nth-child(1) {
+        display: none;
+    }
+
+
+    .hero {
+        padding-top: 120px;
+    }
+
+
+    .hero-text h1 {
+        font-size: 38px;
+    }
+
+
+    .welcome {
+        font-size: 11px;
+    }
+
+
+    .form-container {
+        padding: 25px;
+    }
+
+
+    /* PAYMENT */
+
+    .payment-page {
+        padding-top: 110px;
+
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+
+    .payment-container {
+        width: 95%;
+
+        padding: 25px 20px;
+    }
+
+
+    .payment-container h1 {
+        font-size: 28px;
+    }
+
+
+    .order-row {
+        font-size: 13px;
+    }
+
+
+    .payment-options {
+        grid-template-columns: 1fr;
+    }
+
+
+    .qr-image {
+        width: 200px;
+        height: 200px;
+    }
+
+
+    .final-payment h2 {
+        font-size: 28px;
+    }
+
+}
